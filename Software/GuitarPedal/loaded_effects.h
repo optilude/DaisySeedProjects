@@ -24,7 +24,6 @@
 #include "Effect-Modules/looper_module.h"
 #include "Effect-Modules/metro_module.h"
 #include "Effect-Modules/modulated_tremolo_module.h"
-#include "Effect-Modules/multi_delay_module.h"
 #include "Effect-Modules/nam_a2_module.h"
 #include "Effect-Modules/noise_gate_module.h"
 #include "Effect-Modules/overdrive_module.h"
@@ -48,43 +47,57 @@
 // Dattorro plate reverb - GPL-3.0-or-later, disabled by default. See
 // Effect-Modules/Dattorro/README.md and the matching block in the Makefile
 // before uncommenting.
-// #include "Effect-Modules/dattorro_reverb_module.h"
+#include "Effect-Modules/dattorro_reverb_module.h"
 
 namespace bkshepherd {
 
 void load_effects(int &availableEffectsCount, BaseEffectModule **&availableEffects) {
     // clang-format off
     static BaseEffectModule* effectList[] = {
-        new ModulatedTremoloModule(),
-        new OverdriveModule(),
-        new AutoPanModule(),
-        new ChorusModule(),
-        new ChopperModule(),
-        new ReverbModule(),
-        new MultiDelayModule(),
-        new MetroModule(),
-        new TunerModule(),
-        new PitchShifterModule(),
+
+        // Basic effects
         new CompressorModule(),
-        new LooperModule(),
+        new ChorusModule(),
+        new ModulatedTremoloModule(),
+        new PhaserModule(),
+        new FlangerModule(),
+
+        // Delays and reverbs
+        new DelayModule(),
+        new TapeDelayModule(),
+        new SpectralDelayModule(),
+        new GranularDelayModule(),
+        
+        new ReverbModule(),
+        new CloudSeedModule(),
+        // GPL-3.0-or-later - see Effect-Modules/Dattorro/README.md
+        new DattorroReverbModule(),
+        
+        
+        // Pitch effects
+        new PitchShifterModule(),
+        new PolyOctaveModule(),
+        new SciFiModule(),
+
+        // Weird effects
+        new CrusherModule(),
+        new ChopperModule(),
+        
+        // Utilities
+        new AutoPanModule(),
         new GraphicEQModule(),
         new ParametricEQModule(),
         new NoiseGateModule(),
-        new CloudSeedModule(),
-        new DelayModule(),
-        new TapeDelayModule(),
-        new NamA2Module(),
-        new SciFiModule(),
-        new PolyOctaveModule(),
-        new SpectralDelayModule(),
-        new DistortionModule(),
-        new GranularDelayModule(),
-        new IrModule(),
-        new DrumModule(),  // This module can be used with MIDI keyboard as a drum machine
-        new PhaserModule(),
-        new FlangerModule(),
-        new CrusherModule(),
-
+        
+        new TunerModule(),
+        new MetroModule(),
+        
+        // new OverdriveModule(),
+        // new DistortionModule(),
+        // new LooperModule(),
+        // new NamA2Module(),
+        // new IrModule(),
+        // new DrumModule(),  // This module can be used with MIDI keyboard as a drum machine
         // The following require a MIDI keyboard
         // new MidiKeysModule(),
         // new PluckEchoModule(),
@@ -92,8 +105,6 @@ void load_effects(int &availableEffectsCount, BaseEffectModule **&availableEffec
         // new ModalKeysModule(),
         // new FmKeysModule(),
 
-        // GPL-3.0-or-later - see Effect-Modules/Dattorro/README.md
-        // new DattorroReverbModule(),
     };
     // clang-format on
 

@@ -47,21 +47,21 @@ CPP_SOURCES += Effect-Modules/cloudseed_module.cpp
 CPP_SOURCES += Effect-Modules/compressor_module.cpp
 CPP_SOURCES += Effect-Modules/crusher_module.cpp
 CPP_SOURCES += Effect-Modules/delay_module.cpp
-CPP_SOURCES += Effect-Modules/drum_module.cpp
+#CPP_SOURCES += Effect-Modules/drum_module.cpp
 CPP_SOURCES += Effect-Modules/flanger_module.cpp
 CPP_SOURCES += Effect-Modules/geq_module.cpp
 CPP_SOURCES += Effect-Modules/granulardelay_module.cpp
-CPP_SOURCES += Effect-Modules/distortion_module.cpp
-CPP_SOURCES += Effect-Modules/ImpulseResponse/ImpulseResponse.cpp
-CPP_SOURCES += Effect-Modules/ImpulseResponse/ir_data.cpp
-CPP_SOURCES += Effect-Modules/ir_module.cpp
-CPP_SOURCES += Effect-Modules/looper_module.cpp
+#CPP_SOURCES += Effect-Modules/distortion_module.cpp
+#CPP_SOURCES += Effect-Modules/ImpulseResponse/ImpulseResponse.cpp
+#CPP_SOURCES += Effect-Modules/ImpulseResponse/ir_data.cpp
+#CPP_SOURCES += Effect-Modules/ir_module.cpp
+#CPP_SOURCES += Effect-Modules/looper_module.cpp
 CPP_SOURCES += Effect-Modules/metro_module.cpp
 CPP_SOURCES += Effect-Modules/modulated_tremolo_module.cpp
-CPP_SOURCES += Effect-Modules/multi_delay_module.cpp
-CPP_SOURCES += Effect-Modules/nam_a2_module.cpp
+#CPP_SOURCES += Effect-Modules/multi_delay_module.cpp
+#CPP_SOURCES += Effect-Modules/nam_a2_module.cpp
 CPP_SOURCES += Effect-Modules/noise_gate_module.cpp
-CPP_SOURCES += Effect-Modules/overdrive_module.cpp
+#CPP_SOURCES += Effect-Modules/overdrive_module.cpp
 CPP_SOURCES += Effect-Modules/peq_module.cpp
 CPP_SOURCES += Effect-Modules/phaser_module.cpp
 CPP_SOURCES += Effect-Modules/pitch_shifter_module.cpp
@@ -88,8 +88,8 @@ CPP_SOURCES += Effect-Modules/tuner_module.cpp
 # the matching block in loaded_effects.h) to opt in; doing so means the
 # resulting firmware binary must be distributed under GPLv3, or not
 # distributed at all.
-# CPP_SOURCES += Effect-Modules/Dattorro/Dattorro.cpp
-# CPP_SOURCES += Effect-Modules/dattorro_reverb_module.cpp
+CPP_SOURCES += Effect-Modules/Dattorro/Dattorro.cpp
+CPP_SOURCES += Effect-Modules/dattorro_reverb_module.cpp
 
 # Compiler options
 OPT=-Ofast
