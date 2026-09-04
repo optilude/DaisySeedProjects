@@ -20,6 +20,7 @@
 #include "Effect-Modules/flanger_module.h"
 #include "Effect-Modules/geq_module.h"
 #include "Effect-Modules/granulardelay_module.h"
+#include "Effect-Modules/harmonic_tremolo_module.h"
 #include "Effect-Modules/ir_module.h"
 #include "Effect-Modules/looper_module.h"
 #include "Effect-Modules/metro_module.h"
@@ -59,6 +60,7 @@ void load_effects(int &availableEffectsCount, BaseEffectModule **&availableEffec
         new CompressorModule(),
         new ChorusModule(),
         new ModulatedTremoloModule(),
+        new HarmonicTremoloModule(),
         new PhaserModule(),
         new FlangerModule(),
 
@@ -72,7 +74,6 @@ void load_effects(int &availableEffectsCount, BaseEffectModule **&availableEffec
         new CloudSeedModule(),
         // GPL-3.0-or-later - see Effect-Modules/Dattorro/README.md
         new DattorroReverbModule(),
-        
         
         // Pitch effects
         new PitchShifterModule(),
